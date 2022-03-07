@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="quicksand_bold.ttf">
+            <string>Quicksand-Bold</string>
+        </array>
+        <array key="quicksand_regular.ttf">
+            <string>Quicksand-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FavoritesBreweryViewController" customModule="BreweryBess" customModuleProvider="target">
+            <connections>
+                <outlet property="countFavoritesLabel" destination="bVT-29-V63" id="tqw-su-mdC"/>
+                <outlet property="favoritesBreweryTableView" destination="nWh-Tp-vge" id="ect-rZ-pYi"/>
+                <outlet property="sortLabel" destination="dLY-Pe-DQm" id="VL1-CU-B7C"/>
+                <outlet property="view" destination="vp4-Ig-hXb" id="nnM-Pj-Py7"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="vp4-Ig-hXb">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ewO-Ec-Qhr" userLabel="TextView">
+                    <rect key="frame" x="0.0" y="16" width="414" height="100"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="UFm-ml-GQF" userLabel="TitleStackView">
+                            <rect key="frame" x="20" y="0.0" width="378" height="44"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Suas cervejarias favoritas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jn0-IY-lCf">
+                                    <rect key="frame" x="0.0" y="0.0" width="378" height="22.5"/>
+                                    <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="18"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="aTU-8Y-t0o" userLabel="ResultView">
+                                    <rect key="frame" x="0.0" y="26.5" width="378" height="17.5"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bVT-29-V63">
+                                            <rect key="frame" x="0.0" y="0.0" width="15" height="17.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="15" id="jrr-2B-sGk"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="resultados" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PaZ-iB-MRU">
+                                            <rect key="frame" x="15" y="0.0" width="363" height="17.5"/>
+                                            <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="uZR-ua-mNZ" userLabel="OrderStackView">
+                            <rect key="frame" x="20" y="60" width="125" height="28"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ordenar por: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7yJ-SO-Nlf">
+                                    <rect key="frame" x="0.0" y="0.0" width="86.5" height="28"/>
+                                    <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="14"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLY-Pe-DQm">
+                                    <rect key="frame" x="86.5" y="0.0" width="38.5" height="28"/>
+                                    <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="14"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3pu-Tr-e0e" userLabel="SortButton">
+                            <rect key="frame" x="352" y="57" width="44" height="32"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="Sort"/>
+                            <connections>
+                                <action selector="sortButton:" destination="-1" eventType="touchUpInside" id="eot-TA-zlL"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="uZR-ua-mNZ" secondAttribute="bottom" constant="12" id="Goo-gn-Obr"/>
+                        <constraint firstItem="UFm-ml-GQF" firstAttribute="top" secondItem="ewO-Ec-Qhr" secondAttribute="top" id="JT8-bG-QSF"/>
+                        <constraint firstItem="UFm-ml-GQF" firstAttribute="leading" secondItem="ewO-Ec-Qhr" secondAttribute="leading" constant="20" id="ctG-6W-ns0"/>
+                        <constraint firstAttribute="trailing" secondItem="3pu-Tr-e0e" secondAttribute="trailing" constant="18" id="dPc-Cq-4JB"/>
+                        <constraint firstAttribute="bottom" secondItem="3pu-Tr-e0e" secondAttribute="bottom" constant="11" id="jzN-Sr-mU3"/>
+                        <constraint firstItem="uZR-ua-mNZ" firstAttribute="top" secondItem="UFm-ml-GQF" secondAttribute="bottom" constant="16" id="mlc-mq-2yA"/>
+                        <constraint firstAttribute="trailing" secondItem="UFm-ml-GQF" secondAttribute="trailing" constant="16" id="uDx-YO-Uay"/>
+                        <constraint firstAttribute="height" constant="100" id="uRS-hD-dbi"/>
+                        <constraint firstItem="uZR-ua-mNZ" firstAttribute="leading" secondItem="ewO-Ec-Qhr" secondAttribute="leading" constant="20" id="ud8-51-TjB"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="nWh-Tp-vge">
+                    <rect key="frame" x="16" y="116" width="382" height="364"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="separatorColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="yw1-aa-buq"/>
+                        <outlet property="delegate" destination="-1" id="J7z-rV-opk"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="z6i-YK-gqH"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="ewO-Ec-Qhr" firstAttribute="leading" secondItem="z6i-YK-gqH" secondAttribute="leading" id="GeC-ai-Pxd"/>
+                <constraint firstItem="z6i-YK-gqH" firstAttribute="trailing" secondItem="nWh-Tp-vge" secondAttribute="trailing" constant="16" id="L0b-t1-YSG"/>
+                <constraint firstItem="nWh-Tp-vge" firstAttribute="top" secondItem="ewO-Ec-Qhr" secondAttribute="bottom" id="NvJ-Ck-mz8"/>
+                <constraint firstItem="nWh-Tp-vge" firstAttribute="bottom" secondItem="z6i-YK-gqH" secondAttribute="bottom" id="OU1-YL-vIV"/>
+                <constraint firstItem="nWh-Tp-vge" firstAttribute="leading" secondItem="z6i-YK-gqH" secondAttribute="leading" constant="16" id="Zgt-SG-wIu"/>
+                <constraint firstItem="ewO-Ec-Qhr" firstAttribute="trailing" secondItem="z6i-YK-gqH" secondAttribute="trailing" id="wkK-h0-gDU"/>
+                <constraint firstItem="ewO-Ec-Qhr" firstAttribute="top" secondItem="vp4-Ig-hXb" secondAttribute="top" constant="16" id="wnx-87-Zeu"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="121.73913043478262" y="32.8125"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Sort" width="20" height="18"/>
+    </resources>
+</document>

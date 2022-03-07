@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cervejarias favoritas-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="FavoritesViewController" id="Y6W-OH-hqX" customClass="FavoritesViewController" customModule="BreweryBess" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AUn-pW-4jV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TopBackground" translatesAutoresizingMaskIntoConstraints="NO" id="JlT-iM-0CX">
+                                <rect key="frame" x="0.0" y="44" width="414" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="2wd-eK-O1Z"/>
+                                </constraints>
+                            </imageView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1SV-q1-xFg">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="skf-3S-dKa"/>
+                        <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JlT-iM-0CX" firstAttribute="top" secondItem="skf-3S-dKa" secondAttribute="top" id="7rZ-jS-4tL"/>
+                            <constraint firstItem="JlT-iM-0CX" firstAttribute="trailing" secondItem="skf-3S-dKa" secondAttribute="trailing" id="C6h-jJ-Xzm"/>
+                            <constraint firstItem="1SV-q1-xFg" firstAttribute="leading" secondItem="skf-3S-dKa" secondAttribute="leading" id="PuT-rJ-e7i"/>
+                            <constraint firstItem="1SV-q1-xFg" firstAttribute="trailing" secondItem="skf-3S-dKa" secondAttribute="trailing" id="Rt1-we-cIy"/>
+                            <constraint firstAttribute="bottom" secondItem="1SV-q1-xFg" secondAttribute="bottom" id="T4k-yn-QrU"/>
+                            <constraint firstItem="JlT-iM-0CX" firstAttribute="leading" secondItem="skf-3S-dKa" secondAttribute="leading" id="pb1-ar-kcP"/>
+                            <constraint firstItem="1SV-q1-xFg" firstAttribute="top" secondItem="skf-3S-dKa" secondAttribute="top" id="vTp-4F-HwN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Cervejarias favoritas" id="gWr-mC-cbH"/>
+                    <connections>
+                        <outlet property="favoritesContainer" destination="1SV-q1-xFg" id="UOU-xo-NN4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="100.00000000000001" y="81.696428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="TopBackground" width="360" height="200"/>
+    </resources>
+</document>
